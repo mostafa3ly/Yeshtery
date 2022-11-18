@@ -1,0 +1,62 @@
+$headbar-height: 48px;
+
+.root {
+    height: $headbar-height;
+    background: var(--secondary-color);
+    box-shadow: 0px 0.73px 2px #00000080;
+}
+.content {
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.drawer {
+    margin-inline-end: 32px;
+}
+.offers {
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 32px;
+}
+
+.offer {
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+    p {
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    a {
+        white-space: nowrap;
+        margin-inline-start: 2px;
+    }
+}
+
+.shopNow {
+    font-weight: bold;
+    color: #000000;
+}
+
+.actions > {
+    button {
+        &:not(:last-child) {
+            margin-inline-end: 32px;
+        }
+        svg{
+            margin-inline-end: 10px;
+        }
+    }
+}
+
+.content,
+.primary,
+.offers,
+.actions {
+    display: flex;
+}

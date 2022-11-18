@@ -1,5 +1,11 @@
+import Headbar from "components/Headbar";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <Headbar/>
+    </div>
+  );
 }
 
 export default App;
