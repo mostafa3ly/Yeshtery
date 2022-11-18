@@ -1,6 +1,7 @@
 import { FC } from "react";
 import classes from "./styles.module.scss";
 import Button from "components/Button";
+import Container from "components/Container";
 import { ReactComponent as Drawer } from "images/drawer.svg";
 import { ReactComponent as Logo } from "images/logo.svg";
 import { ReactComponent as ArrowLeft } from "images/arrow-left.svg";
@@ -8,17 +9,16 @@ import { ReactComponent as ArrowRight } from "images/arrow-right.svg";
 import { ReactComponent as Locate } from "images/locate.svg";
 import { ReactComponent as ContactUs } from "images/contact-us.svg";
 import { ReactComponent as Track } from "images/track.svg";
-import Container from "components/Container";
 
 const Headbar: FC = () => {
   return (
-    <header className={classes.root}>
+    <div className={classes.root}>
       <Container>
         <div className={classes.content}>
-          <div className={classes.primary}>
-            <Button className={classes.drawer}>
-              <Drawer />
-            </Button>
+          <Button className={classes.drawer}>
+            <Drawer />
+          </Button>
+          <div>
             <Logo />
           </div>
           <div className={classes.offers}>
@@ -37,21 +37,21 @@ const Headbar: FC = () => {
           </div>
           <div className={classes.actions}>
             <Button>
-              <ContactUs className={classes.buttonIcon} />
+              <ContactUs />
               Contact Us
             </Button>
             <Button>
-              <Track className={classes.buttonIcon} />
+              <Track />
               Track Order
             </Button>
             <Button>
-              <Locate className={classes.buttonIcon} />
+              <Locate />
               Find A Store
             </Button>
           </div>
         </div>
       </Container>
-    </header>
+    </div>
   );
 };
 export default Headbar;

@@ -1,9 +1,9 @@
-import Headbar from "components/Headbar";
+import Header from "components/Header";
 
 function App() {
   return (
     <div>
-      <Headbar/>
+      <Header />
     </div>
   );
 }
