@@ -1,0 +1,46 @@
+$toolbar-height: 84px;
+
+.root {
+    height: $toolbar-height;
+    box-shadow: 0px 0.92px 3px #00000080;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.brand {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 24px;
+}
+.actions {
+    display: flex;
+    > button {
+        font-size: 16px;
+        &:not(:last-child) {
+            margin-inline-end: 32px;
+        }
+        svg {
+            margin-inline-end: 8px;
+        }
+    }
+}
+.cart {
+    position: relative;
+    .cartItems {
+        position: absolute;
+        top: -3px;
+        right: 3px;
+        padding: 0 4px;
+        min-width: 7px;
+        height: 15px;
+        font-size: 9px;
+        border-radius: 8px;
+        text-align: center;
+        background: var(--secondary-color);
+        line-height: 15px;
+    }
+}
