@@ -1,0 +1,16 @@
+.root {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.root:not(:disabled) {
+    cursor: pointer;
+}
+
+.root:hover {
+    opacity: 0.5;
+}
