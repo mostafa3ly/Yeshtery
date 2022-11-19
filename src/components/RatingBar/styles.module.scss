@@ -1,0 +1,6 @@
+.root {
+    display: flex;
+    button:not(:last-child) {
+        margin-inline-end: 4px;
+    }
+}
