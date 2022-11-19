@@ -1,17 +1,15 @@
-import { FC, Fragment } from "react";
+import { FC } from "react";
 import classes from "./styles.module.scss";
 import Container from "components/Container";
 
 const ITEMS = ["Men", "Clothing", "Tops", "Adidas", "Adidas Black T-Shirt"];
 const Breadcrumb: FC = () => {
   const renderItems = (): JSX.Element[] =>
-    ITEMS.map((item, index) => {
+    ITEMS.map((item) => {
       return (
-        <Fragment>
           <div key={item}>
             <a href="/">{item}</a>
           </div>
-        </Fragment>
       );
     });
 

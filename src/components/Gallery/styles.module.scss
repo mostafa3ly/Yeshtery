@@ -1,0 +1,55 @@
+$thumbnail-dimension: 568px;
+
+.root {
+    display: flex;
+    margin-top: 50px;
+    height: 1000px;
+}
+
+.thumbnail {
+    height: $thumbnail-dimension;
+    min-width: $thumbnail-dimension;
+    position: relative;
+    background: #f6f6f6;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.thirtySixty {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    top: 24px;
+    left: 24px;
+    box-shadow: 0px 0px 3px #00000040;
+    border-radius: 7px;
+    width: 64px;
+    height: 64px;
+    svg {
+        display: block;
+        height: 100%;
+        margin: auto;
+    }
+}
+
+.gallery {
+    margin-top: 11px;
+    display: flex;
+    justify-content: space-between;
+    button:first-child {
+        margin-inline-end: 20px;
+    }
+    button:last-child {
+        margin-inline-start: 20px;
+    }
+}
+.images {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}

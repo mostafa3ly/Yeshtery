@@ -1,0 +1,137 @@
+.root {
+    flex-grow: 1;
+    margin-inline-start: 64px;
+}
+.name {
+    font-weight: bold;
+    font-size: 18px;
+}
+.category {
+    color: #a7a9ac;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.rating {
+    display: flex;
+    margin-top: 28px;
+    span {
+        font-weight: bold;
+        font-size: 17px;
+    }
+    > * {
+        margin-inline-end: 16px;
+    }
+}
+.rates {
+    color: #575756;
+    font-size: 15px !important;
+}
+.cost {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    > * {
+        margin-inline-end: 16px;
+    }
+}
+.price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 30px;
+}
+.currency {
+    font-weight: 600;
+    font-size: 20px;
+}
+.oldPrice {
+    font-weight: 700;
+    color: #a7a9ac;
+    font-size: 16px;
+}
+
+.oldCurrency {
+    font-weight: 600;
+}
+.discount {
+    background: var(--secondary-color);
+    padding: 5px 10px;
+    margin: auto 0;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.divider {
+    margin: 20px 0;
+    height: 0.5px;
+    width: 100%;
+    background: #d9d9d9;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sizes {
+    margin-top: 20px;
+    display: flex;
+    button {
+        margin-inline-end: 16px;
+        color: var(--primary-color);
+        width: 60px;
+        height: 60px;
+        border: 0.5px solid #d9d9d9;
+        border-radius: 30px;
+        font-size: 10px;
+        justify-content: center;
+        font-weight: 600;
+    }
+    button:nth-child(3) {
+        background: #ececec;
+        color: black;
+        border: 0;
+    }
+}
+
+.colors {
+    margin-top: 20px;
+    display: flex;
+    button {
+        margin-inline-end: 16px;
+        width: 60px;
+        height: 60px;
+        border-radius: 40px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    button:first-child {
+        border: 1px solid var(--primary-color);
+    }
+}
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    button {
+        width: 50%;
+        height: 54px;
+        justify-content: center;
+        border-radius: 27px;
+        font-size: 16px;
+    }
+}
+
+.addCart {
+    background: var(--primary-color);
+    color: #ffffff;
+    margin-inline-end: 16px;
+}
+
+.pickup {
+    background: var(--secondary-color);
+    margin-inline-start: 16px;
+}
