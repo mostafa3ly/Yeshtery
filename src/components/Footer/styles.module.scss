@@ -1,0 +1,42 @@
+.root {
+    background: #3c3c3b;
+    padding: 50px 0 22px 0;
+}
+.main {
+    display: flex;
+}
+.horizontalDivider {
+    background: #777777;
+    width: 0.5px;
+    margin: 0 50px;
+}
+
+.divider {
+    background: #777777;
+    height: 0.5px;
+    width: 100%;
+    margin: 30px 0;
+}
+.licence {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    span {
+        color: #ffffff;
+        font-size: 16px;
+    }
+}
+.payment {
+    > img:not(:last-child) {
+        margin-inline-end: 10px;
+    }
+}
+.powered {
+    display: flex;
+    align-items: center;
+    span {
+        font-size: 14px;
+        margin-inline-end: 7px;
+    }
+}
