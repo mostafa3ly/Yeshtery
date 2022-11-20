@@ -21,8 +21,6 @@ $thumbnail-dimension: 568px;
 
 .thirtySixty {
     position: absolute;
-    top: 0;
-    left: 0;
     background: #ffffff;
     top: 24px;
     left: 24px;
@@ -31,8 +29,7 @@ $thumbnail-dimension: 568px;
     width: 64px;
     height: 64px;
     svg {
-        display: block;
-        height: 100%;
+        height: 48px;
         margin: auto;
     }
 }
