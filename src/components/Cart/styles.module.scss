@@ -6,13 +6,16 @@
     width: 100vw;
     z-index: 100;
     transition: opacity 0.2s ease-in-out;
+    opacity: 0;
 }
 .backdropOpen {
     position: fixed;
     opacity: 1;
 }
 .backdropClose {
-    opacity: 0;
+    height: 0;
+    position: static;
+    width: 0;
 }
 .drawer {
     background: #ffffff;
