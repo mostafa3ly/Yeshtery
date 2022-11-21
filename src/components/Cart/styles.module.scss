@@ -1,0 +1,127 @@
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    inset: 0;
+    overflow: hidden;
+    width: 100vw;
+    z-index: 100;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+.backdropOpen {
+    position: fixed;
+    opacity: 1;
+}
+.backdropClose {
+    height: 0;
+    position: static;
+    width: 0;
+}
+.drawer {
+    background: #ffffff;
+    box-shadow: -1.78px -1.78px 4px #00000040;
+    height: 100vh;
+    padding: 32px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 475px;
+    z-index: 200;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    transition: all 0.3s ease-in;
+}
+
+.drawerOpen {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.drawerClose {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.close {
+    margin-left: auto;
+}
+.title {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 28px;
+    margin-top: 8px;
+}
+.subtitle {
+    font-size: 18px;
+}
+.empty {
+    text-align: center;
+    font-weight: bold;
+}
+.product {
+    border: 0.75px solid #ececec;
+    border-radius: 7px;
+    display: flex;
+    padding: 8px;
+}
+.total {
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+}
+.actions {
+    display: flex;
+    button {
+        width: 50%;
+        justify-content: center;
+        height: 48px;
+        border-radius: 24px;
+        font-size: 12px;
+        &:first-child {
+            background: var(--secondary-color);
+            color: #000000;
+            margin-inline-end: 9px;
+        }
+        &:last-child {
+            background: var(--primary-color);
+            color: #ffffff;
+            margin-inline-start: 9px;
+        }
+    }
+}
+.details {
+    margin-inline-start: 10px;
+    padding: 6px;
+}
+.name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.quantity {
+    font-size: 11px;
+    color: #3c3c3b;
+    font-weight: 600;
+}
+.price {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+.cost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.currency {
+    font-size: 14px;
+    font-weight: 500;
+}
+.remove {
+    background: var(--secondary-color);
+    font-size: 10px;
+    padding: 6px 20px;
+    border-radius: 12px;
+}

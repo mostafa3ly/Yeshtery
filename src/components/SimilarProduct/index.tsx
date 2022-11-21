@@ -5,6 +5,7 @@ import { ReactComponent as ThirtySixty } from "images/360.svg";
 import Adidas from "images/adidas.png";
 import RatingBar from "components/RatingBar";
 import { Product } from "types/Product";
+import { addCommasToNumbers } from "utils/addCommasToNumbers";
 
 interface SimilarProductProps {
   product: Product;
@@ -31,7 +32,8 @@ const SimilarProduct: FC<SimilarProductProps> = ({ product }) => {
     return (
       <div className={classes.sale}>
         <del className={classes.oldPrice}>
-          {product.price} <span className={classes.oldCurrency}>LE</span>
+          {addCommasToNumbers(product.price)}{" "}
+          <span className={classes.oldCurrency}>LE</span>
         </del>
         <span className={classes.discount}>{product.discount}%</span>
       </div>
@@ -75,7 +77,8 @@ const SimilarProduct: FC<SimilarProductProps> = ({ product }) => {
         <div className={classes.cost}>
           <div>
             <p className={classes.price}>
-              {price} <span className={classes.currency}>LE</span>
+              {addCommasToNumbers(price)}&nbsp;
+              <span className={classes.currency}>LE</span>
             </p>
             {renderOldPrice()}
           </div>
