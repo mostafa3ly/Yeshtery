@@ -4,11 +4,16 @@ import Toolbar from "components/Toolbar";
 import Navbar from "components/Navbar";
 import Breadcrumb from "components/Breadcrumb";
 
-const Header: FC = () => {
+interface HeaderProps {
+  items: number;
+  onOpenCart: () => void;
+}
+
+const Header: FC<HeaderProps> = ({ items, onOpenCart }) => {
   return (
     <header>
       <Headbar />
-      <Toolbar />
+      <Toolbar items={items} onOpenCart={onOpenCart} />
       <Navbar />
       <Breadcrumb />
     </header>

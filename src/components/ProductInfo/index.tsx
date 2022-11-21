@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { ChangeEvent, FC, useState } from "react";
 import classes from "./styles.module.scss";
 import Black from "images/black.png";
 import Red from "images/red.png";
@@ -6,10 +6,40 @@ import Button from "components/Button";
 import Adidas from "images/adidas.png";
 import Quantity from "components/Quantity";
 import RatingBar from "components/RatingBar";
+import { CartProduct } from "types/CartProduct";
+import Thumbnail from "images/image1.png";
 
 const SIZES = ["Small", "Medium", "Large", "X Large", "XX Large"];
 
-const ProductInfo: FC = () => {
+interface ProductInfoProps {
+  onAddToCart: (product: CartProduct) => void;
+}
+
+const ProductInfo: FC<ProductInfoProps> = ({ onAddToCart }) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleChangeQuantity = (e: ChangeEvent<HTMLInputElement>): void => {
+    const value = +e.target.value;
+    if (!value) return;
+    setQuantity(value);
+  };
+  const handleIncreaseQuantity = (): void => {
+    setQuantity((prevState) => prevState + 1);
+  };
+  const handleDecreaseQuantity = (): void => {
+    setQuantity((prevState) => Math.max(prevState - 1, 1));
+  };
+  const handleAddToCart = (): void => {
+    const product: CartProduct = {
+      id: "1",
+      image: Thumbnail,
+      price: 9999,
+      name: "Lorem ipsum dolor sit amet, consecte adipiscing elit.",
+      quantity,
+    };
+    onAddToCart(product);
+  };
+
   const renderSizes = (): JSX.Element[] =>
     SIZES.map((size) => <Button key={size}>{size}</Button>);
 
@@ -50,9 +80,16 @@ const ProductInfo: FC = () => {
       </div>
       <div className={classes.divider} />
       <div className={classes.title}>Quantity</div>
-      <Quantity />
+      <Quantity
+        quantity={quantity}
+        onChangeQuantity={handleChangeQuantity}
+        onIncreaseQuantity={handleIncreaseQuantity}
+        onDecreaseQuantity={handleDecreaseQuantity}
+      />
       <div className={classes.actions}>
-        <Button className={classes.addCart}>Add To Cart</Button>
+        <Button className={classes.addCart} onClick={handleAddToCart}>
+          Add To Cart
+        </Button>
         <Button className={classes.pickup}>Pickup From Store</Button>
       </div>
     </div>

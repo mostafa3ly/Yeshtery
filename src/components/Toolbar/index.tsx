@@ -8,7 +8,12 @@ import { ReactComponent as Wishlist } from "images/wishlist.svg";
 import { ReactComponent as Cart } from "images/cart.svg";
 import { ReactComponent as Login } from "images/login.svg";
 
-const Toolbar: FC = () => {
+interface ToolbarProps {
+  items: number;
+  onOpenCart: () => void;
+}
+
+const Toolbar: FC<ToolbarProps> = ({ items, onOpenCart }) => {
   return (
     <div className={classes.root}>
       <Container>
@@ -18,10 +23,12 @@ const Toolbar: FC = () => {
             <Adidas />
           </div>
           <div className={classes.actions}>
-            <Button>
+            <Button onClick={onOpenCart}>
               <div className={classes.cart}>
                 <Cart />
-                <span className={classes.cartItems}>0</span>
+                <span className={classes.cartItems}>
+                  {items > 99 ? "99+" : items}
+                </span>
               </div>
               Cart
             </Button>
